@@ -1,3 +1,4 @@
+import ApiError from '@/errors/ApiError'
 import { Prisma, PrismaClient } from '@prisma/client'
 
 export default class ExampleService {
@@ -23,10 +24,22 @@ export default class ExampleService {
     data: Prisma.exampleUpdateInput,
     where: Prisma.exampleWhereUniqueInput,
   ) {
-    return await this.prisma.example.update({ data, where })
+    try {
+      return await this.prisma.example.update({ data, where })
+    } catch (error) {
+      if (error instanceof Prisma.PrismaClientKnownRequestError)
+        if (error.code === 'P2025') throw new ApiError('Example not found', 400)
+      throw error
+    }
   }
 
   public async delete(where: Prisma.exampleWhereUniqueInput) {
-    return await this.prisma.example.delete({ where })
+    try {
+      return await this.prisma.example.delete({ where })
+    } catch (error) {
+      if (error instanceof Prisma.PrismaClientKnownRequestError)
+        if (error.code === 'P2025') throw new ApiError('Example not found', 400)
+      throw error
+    }
   }
 }

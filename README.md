@@ -3,8 +3,16 @@
 ## O que está incluído?
 
 - Fastify - API
-- Prisma - ORM
 - Fastify Swagger - Documentação OpenAPI
+- Fastify CORS - Plugin para Cross-origin Resource Sharing
+- Fastify JWT - Plugin para utilização de JsonWebToken
+
+```ts
+// Necessário remover comentário da linha abaixo no index.ts para iniciar a verificação.
+await request.jwtVerify()
+```
+
+- Prisma - ORM
 - Zod - Validação e provedor de tipos
 - Error Handler - Tratativa de Erros
 

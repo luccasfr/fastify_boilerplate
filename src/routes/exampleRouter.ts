@@ -56,8 +56,10 @@ export default async function ExampleRouter(fastify: FastifyInstance) {
         params: exampleParamsSchema,
       },
     },
-    async () => {
-      return exampleServiceInstance.findMany()
+    async (request) => {
+      return exampleServiceInstance.findUnique({
+        id: Number(request.params.id),
+      })
     },
   )
 

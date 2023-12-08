@@ -12,9 +12,7 @@
     "lint:fix": "eslint src/**/*.ts --fix",
     "generate": "prisma generate",
     "migrate": "prisma migrate dev",
-    "postmigrate": "npm run generate",
-    "migrate:deploy": "prisma migrate deploy",
-    "postmigrate:deploy": "npm run generate"
+    "migrate:deploy": "prisma migrate deploy"
   },
   "keywords": [],
   "author": "",
@@ -33,9 +31,12 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@fastify/cors": "^8.4.2",
+    "@fastify/jwt": "^7.2.4",
     "@fastify/swagger": "^8.12.1",
     "@fastify/swagger-ui": "^2.0.1",
     "@prisma/client": "5.7.0",
+    "dotenv": "^16.3.1",
     "fastify": "^4.24.3",
     "fastify-type-provider-zod": "^1.1.9",
     "prisma": "^5.7.0",
