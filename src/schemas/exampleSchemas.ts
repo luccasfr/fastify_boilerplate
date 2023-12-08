@@ -9,7 +9,12 @@ export const exampleSchema = z
 
 export const exampleParamsSchema = z
   .object({
-    id: z.number().positive().describe('Some description for id'),
+    id: z
+      .string()
+      .refine((v) => {
+        return !isNaN(Number(v))
+      })
+      .describe('Some description for id'),
   })
   .describe('Params should be an object with id')
 

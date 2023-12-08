@@ -8,10 +8,13 @@ import {
   validatorCompiler,
 } from 'fastify-type-provider-zod'
 import Routes from './routes'
+import errorHandler from './handlers/errorHandler'
 
 const app = fastify()
 app.setValidatorCompiler(validatorCompiler)
 app.setSerializerCompiler(serializerCompiler)
+
+app.setErrorHandler(errorHandler)
 
 app.register(fastifySwagger, {
   openapi: {

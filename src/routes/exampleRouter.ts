@@ -2,8 +2,8 @@ import {
   exampleParamsSchema,
   exampleResponseSchema,
   exampleSchema,
-} from '@/schemas/example.schemas'
-import exampleService from '@/services/example.service'
+} from '@/schemas/exampleSchemas'
+import exampleService from '@/services/exampleService'
 import { FastifyInstance } from 'fastify'
 import { ZodTypeProvider } from 'fastify-type-provider-zod'
 import prismaInstance from 'prisma/prismaInstance'
@@ -74,7 +74,7 @@ export default async function ExampleRouter(fastify: FastifyInstance) {
     },
     async (request) => {
       return exampleServiceInstance.update(request.body, {
-        id: request.params.id,
+        id: Number(request.params.id),
       })
     },
   )
@@ -91,7 +91,7 @@ export default async function ExampleRouter(fastify: FastifyInstance) {
     },
     async (request) => {
       return exampleServiceInstance.delete({
-        id: request.params.id,
+        id: Number(request.params.id),
       })
     },
   )
