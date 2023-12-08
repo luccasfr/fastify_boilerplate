@@ -9,7 +9,12 @@
     "build": "tsc",
     "start": "node ./dist/index.js",
     "lint": "eslint src/**/*.ts",
-    "lint:fix": "eslint src/**/*.ts --fix"
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "generate": "prisma generate",
+    "migrate": "prisma migrate dev",
+    "postmigrate": "npm run generate",
+    "migrate:deploy": "prisma migrate deploy",
+    "postmigrate:deploy": "npm run generate"
   },
   "keywords": [],
   "author": "",
