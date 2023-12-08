@@ -13,7 +13,8 @@ await request.jwtVerify()
 ```
 
 - Prisma - ORM
-- Zod - Validação e provedor de tipos
+- Zod - Validação de IO
+- Zod Type Provider - Provedior de tipos
 - Error Handler - Tratativa de Erros
 
 ## Como iniciar?
