@@ -1,0 +1,39 @@
+{
+  "name": "node_boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for node.js with Typescript, ESLint and Prettier",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "dev": "nodemon --watch \"*.ts\" --exec \"ts-node\" -r tsconfig-paths/register ./src/index.ts",
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "nodemon": "^3.0.2",
+    "prettier": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@fastify/swagger": "^8.12.1",
+    "@fastify/swagger-ui": "^2.0.1",
+    "@prisma/client": "5.7.0",
+    "fastify": "^4.24.3",
+    "fastify-type-provider-zod": "^1.1.9",
+    "prisma": "^5.7.0",
+    "zod": "^3.22.4"
+  }
+}
