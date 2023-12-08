@@ -1,7 +1,7 @@
 {
-  "name": "node_boilerplate",
+  "name": "fastify_boilerplate",
   "version": "1.0.0",
-  "description": "Boilerplate for node.js with Typescript, ESLint and Prettier",
+  "description": "Boilerplate for Fastify API's with Zod (plus zod type provider) and Prisma ORM",
   "main": "index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
