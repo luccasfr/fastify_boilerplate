@@ -15,7 +15,7 @@
     "migrate:deploy": "prisma migrate deploy"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lucas Ferreira",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.10.4",
