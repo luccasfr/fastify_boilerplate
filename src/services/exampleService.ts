@@ -1,4 +1,4 @@
-import ApiError from '@/errors/ApiError'
+import ApiError from '@/errors/apiError'
 import { Prisma, PrismaClient } from '@prisma/client'
 
 export default class ExampleService {

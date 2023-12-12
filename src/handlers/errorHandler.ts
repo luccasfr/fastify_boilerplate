@@ -1,4 +1,4 @@
-import ApiError from '@/errors/ApiError'
+import ApiError from '@/errors/apiError'
 import { FastifyError, FastifyReply, FastifyRequest } from 'fastify'
 import { ZodError } from 'zod'
 
