@@ -12,15 +12,15 @@
     "lint:fix": "eslint src/**/*.ts --fix",
     "generate": "prisma generate",
     "migrate": "prisma migrate dev",
-    "migrate:deploy": "prisma migrate deploy"
+    "migrate:deploy": "prisma migrate deploy",
+    "test": "jest"
   },
   "keywords": [],
   "author": "Lucas Ferreira",
   "license": "ISC",
   "husky": {
     "hooks": {
-      "pre-commit": "npm test",
-      "pre-push": "npm test"
+      "pre-commit": "npm run test"
     }
   },
   "devDependencies": {
