@@ -16,7 +16,7 @@
   "rules": {
     "no-var": "error",
     "semi": "off",
-    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "indent": "off", // prettier should handle this
     "no-multi-spaces": "error",
     "space-in-parens": "error",
     "no-multiple-empty-lines": "error",

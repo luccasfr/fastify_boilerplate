@@ -8,15 +8,17 @@
 - Fastify JWT - Plugin para utilização de JsonWebToken
 
 ```ts
-// Necessário remover comentário da linha abaixo no index.ts para iniciar a verificação.
-await request.jwtVerify()
+// Necessário remover comentário das linhas abaixo no index.ts para iniciar a verificação.
+import authHandler from './handlers/authHandler'
+
+fastify.addHook('onRequest', authHandler)
 ```
 
 - Prisma - ORM
 - Zod - Validação de IO
 - Zod Type Provider - Provedor de tipos
 - Error Handler - Tratativa de Erros
-- JEST - Testes unitários 
+- JEST - Testes unitários
 
 ## Como iniciar?
 

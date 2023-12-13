@@ -1,4 +1,4 @@
-import run from '@/index'
+import { silentRun } from '@/index'
 import { exampleResponseSchema } from '@/schemas/exampleSchemas'
 import { Server } from 'http'
 import request from 'supertest'
@@ -8,7 +8,7 @@ describe('Example Router Tests', () => {
   let exampleId: number
 
   beforeAll(async () => {
-    app = await run()
+    app = await silentRun()
   })
 
   afterAll((done) => {
@@ -25,6 +25,10 @@ describe('Example Router Tests', () => {
 
     const response = await request(app).post('/api/example').send(exampleData)
 
+    if (response.status !== 200) {
+      console.error('Error response body:', response.body)
+    }
+
     expect(response.status).toBe(200)
     const validationResult = exampleResponseSchema.safeParse(response.body)
     expect(validationResult.success).toBe(true)
@@ -35,6 +39,10 @@ describe('Example Router Tests', () => {
   it('should get all examples with GET /api/example/', async () => {
     const response = await request(app).get('/api/example')
 
+    if (response.status !== 200) {
+      console.error('Error response body:', response.body)
+    }
+
     expect(response.status).toBe(200)
     const validationResult = exampleResponseSchema.array().safeParse(response.body)
     expect(validationResult.success).toBe(true)
@@ -42,6 +50,10 @@ describe('Example Router Tests', () => {
 
   it('should get a specific example by id with GET /api/example/:id', async () => {
     const response = await request(app).get(`/api/example/${exampleId}`)
+
+    if (response.status !== 200) {
+      console.error('Error response body:', response.body)
+    }
 
     expect(response.status).toBe(200)
     const validationResult = exampleResponseSchema.safeParse(response.body)
@@ -58,6 +70,10 @@ describe('Example Router Tests', () => {
       .put(`/api/example/${exampleId}`)
       .send(updatedExampleData)
 
+    if (response.status !== 200) {
+      console.error('Error response body:', response.body)
+    }
+
     expect(response.status).toBe(200)
     const validationResult = exampleResponseSchema.safeParse(response.body)
     expect(validationResult.success).toBe(true)
@@ -65,6 +81,10 @@ describe('Example Router Tests', () => {
 
   it('should delete an example with DELETE /api/example/:id', async () => {
     const response = await request(app).delete(`/api/example/${exampleId}`)
+
+    if (response.status !== 200) {
+      console.error('Error response body:', response.body)
+    }
 
     expect(response.status).toBe(200)
     const validationResult = exampleResponseSchema.safeParse(response.body)
