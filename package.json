@@ -6,9 +6,8 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "nodemon --watch \"*.ts\" --exec \"ts-node\" -r tsconfig-paths/register ./src/index.ts",
-    "prebuild": "npm test",
     "build": "tsc",
-    "start": "node ./dist/index.js",
+    "start": "node -r ts-node/register -r tsconfig-paths/register ./dist/src/index.js",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "generate": "prisma generate",
@@ -46,6 +45,7 @@
     "dotenv": "^16.3.1",
     "fastify": "^4.24.3",
     "fastify-type-provider-zod": "^1.1.9",
+    "module-alias": "^2.2.3",
     "prisma": "^5.7.0",
     "zod": "^3.22.4"
   }

@@ -1,7 +1,7 @@
 import fastifyCors from '@fastify/cors'
+import fastifyJWT from '@fastify/jwt'
 import fastifySwagger from '@fastify/swagger'
 import fastifySwaggerUI from '@fastify/swagger-ui'
-import fastifyJWT from '@fastify/jwt'
 import 'dotenv/config'
 import Fastify from 'fastify'
 import {
