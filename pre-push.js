@@ -1,4 +1,3 @@
-// pre-push.js
 const { execSync } = require('child_process')
 
 try {
