@@ -19,6 +19,7 @@ fastify.addHook('onRequest', authHandler)
 - Zod Type Provider - Provedor de tipos
 - Error Handler - Tratativa de Erros
 - JEST - Testes unitários
+- Husky - Execução de testes unitários antes do Push ao repositório
 
 ## Como iniciar?
 
