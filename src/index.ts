@@ -73,6 +73,10 @@ async function run() {
   fastify.log.info(`Documentation running at http://${addressInfo.address}/docs`)
   if (addressInfo.address === '::1')
     fastify.log.info(`Documentation running at http://127.0.0.1:${addressInfo.port}/docs`)
+
+  return fastify.server
 }
 
 run()
+
+export default run
