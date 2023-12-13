@@ -16,6 +16,7 @@ await request.jwtVerify()
 - Zod - Validação de IO
 - Zod Type Provider - Provedor de tipos
 - Error Handler - Tratativa de Erros
+- JEST - Testes unitários 
 
 ## Como iniciar?
 
