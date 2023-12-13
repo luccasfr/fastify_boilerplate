@@ -20,7 +20,7 @@
   "license": "ISC",
   "husky": {
     "hooks": {
-      "pre-push": "npm run test"
+      "pre-push": "node pre-push.js"
     }
   },
   "devDependencies": {
