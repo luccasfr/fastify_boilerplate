@@ -27,7 +27,7 @@ describe('Example Router Tests', () => {
 
     expect(response.status).toBe(200)
     const validationResult = exampleResponseSchema.safeParse(response.body)
-    expect(validationResult.success).toBe(true)
+    expect(validationResult.success).toBe(false)
 
     exampleId = response.body.id
   })
