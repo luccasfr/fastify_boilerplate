@@ -52,7 +52,7 @@
     "fastify": "^4.25.1",
     "fastify-type-provider-zod": "^1.1.9",
     "module-alias": "^2.2.3",
-    "prisma": "^5.7.0",
+    "prisma": "^5.7.1",
     "zod": "^3.22.4"
   }
 }
