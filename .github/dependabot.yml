@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+    automerged_updates:
+      - match:
+          - dependency-type: 'all'
+        automerge-options:
+          merge_method: 'merge'
+    versioning-strategy: 'increase'
