@@ -1,5 +1,6 @@
 import ApiError from '@/errors/apiError'
 import { Prisma, PrismaClient } from '@prisma/client'
+import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library'
 
 export default class ExampleService {
   private prisma: PrismaClient
@@ -27,7 +28,7 @@ export default class ExampleService {
     try {
       return await this.prisma.example.update({ data, where })
     } catch (error) {
-      if (error instanceof Prisma.PrismaClientKnownRequestError)
+      if (error instanceof PrismaClientKnownRequestError)
         if (error.code === 'P2025') throw new ApiError('Example not found', 400)
       throw error
     }
