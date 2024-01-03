@@ -24,9 +24,8 @@ export default async function ExampleRouter(fastify: FastifyInstance) {
         },
       },
     },
-    async () => {
-      throw new Error('test')
-      // return exampleServiceInstance.create(request.body)
+    async (request) => {
+      return exampleServiceInstance.create(request.body)
     },
   )
 
