@@ -13,7 +13,7 @@
     "generate": "prisma generate",
     "migrate": "prisma migrate dev",
     "migrate:deploy": "prisma migrate deploy",
-    "prepush": "jest --coverage",
+    "prepush": "jest",
     "test": "jest --coverage --json --outputFile=reports/test-results.json"
   },
   "keywords": [],
