@@ -8,4 +8,5 @@ module.exports = {
     '^prisma/(.*)$': '<rootDir>/prisma/$1',
   },
   coverageReporters: ['text', 'json-summary'],
+  coverageDirectory: 'reports'
 }
