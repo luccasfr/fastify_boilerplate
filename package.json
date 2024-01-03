@@ -13,7 +13,7 @@
     "generate": "prisma generate",
     "migrate": "prisma migrate dev",
     "migrate:deploy": "prisma migrate deploy",
-    "test": "jest --json --outputFile=test-results.json --coverage",
+    "test": "jest --json --outputFile=reports/test-results.json --coverage",
     "test-and-commit": "npm run test && git add . && git commit -m \"test: update test results\" || true"
   },
   "keywords": [],
