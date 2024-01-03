@@ -13,8 +13,7 @@
     "generate": "prisma generate",
     "migrate": "prisma migrate dev",
     "migrate:deploy": "prisma migrate deploy",
-    "test": "jest --json --outputFile=reports/test-results.json --coverage",
-    "test-and-commit": "npm run test && git diff --quiet reports/test-results.json || (git add reports/test-results.json && git commit -m \"test: update test results\" && git push --no-verify)"
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "Lucas Ferreira",
