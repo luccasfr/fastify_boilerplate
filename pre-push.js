@@ -1,11 +1,8 @@
 const { execSync } = require('child_process')
-const fs = require('fs')
 
 try {
-  if (fs.existsSync('reports/test-results.json'))
-    fs.unlinkSync('reports/test-results.json')
-  execSync('npm run test:json', { stdio: 'inherit' })
-  while (!fs.existsSync('reports/test-results.json')) {}
+  console.log('Running tests before push...')
+  execSync('npm run test', { stdio: 'inherit' })
 } catch (error) {
   console.error('Tests failed. Please fix the tests before pushing.')
   process.exit(1)
