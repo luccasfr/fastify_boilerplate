@@ -1,6 +1,8 @@
 # Fastify Boilerplate
 
 ![Coverage](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fluccasfr%2Ffastify_boilerplate%2Fmain%2Freports%2Fcoverage-summary.json&query=%24.total.lines.pct&suffix=%25&style=flat&label=code-coverage&color=blue)
+![Passed Tests](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fluccasfr%2Ffastify_boilerplate%2Fmain%2Freports%2Ftest-summary.json&query=%24.amountPassed&style=flat&label=passed-tests&color=green)
+![Passed Tests %](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fluccasfr%2Ffastify_boilerplate%2Fmain%2Freports%2Ftest-summary.json&query=%24.pctPassed&suffix=%25&style=flat&label=passed-tests&color=green)
 
 ## What's included?
 
