@@ -2,7 +2,13 @@
   "parser": "@typescript-eslint/parser",
   "extends": ["plugin:prettier/recommended", "prettier", "eslint:recommended"],
   "plugins": ["@typescript-eslint"],
-  "ignorePatterns": ["node_modules/", "dist/", "jest.config.js", "pre-push.js"],
+  "ignorePatterns": [
+    "node_modules/",
+    "dist/",
+    "jest.config.js",
+    "pre-push.js",
+    "reports"
+  ],
   "parserOptions": {
     "ecmaVersion": 2022,
     "sourceType": "module",
