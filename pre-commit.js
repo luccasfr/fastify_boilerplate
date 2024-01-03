@@ -20,7 +20,7 @@ function summarizeTest(testResultsJson) {
 }
 
 try {
-  testResults = execSync('npm run test', { stdio: 'inherit' })
+  testResults = execSync('npm run test:report', { stdio: 'inherit' })
   const testResultsJson = fs.readFileSync('reports/test-results.json')
   summarizeTest(testResultsJson)
 } catch (error) {

@@ -13,7 +13,9 @@
     "generate": "prisma generate",
     "migrate": "prisma migrate dev",
     "migrate:deploy": "prisma migrate deploy",
-    "test": "jest --coverage --json --outputFile=reports/test-results.json"
+    "test": "jest",
+    "test:report": "jest --coverage --json --outputFile=reports/test-results.json",
+    "precommit": "node pre-commit.js"
   },
   "keywords": [],
   "author": "Lucas Ferreira",
@@ -24,7 +26,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts}": "node pre-commit.js"
+    "*.{js,ts}": "npm run precommit"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
