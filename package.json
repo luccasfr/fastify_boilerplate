@@ -13,7 +13,6 @@
     "generate": "prisma generate",
     "migrate": "prisma migrate dev",
     "migrate:deploy": "prisma migrate deploy",
-    "prepush": "jest",
     "test": "jest --coverage --json --outputFile=reports/test-results.json"
   },
   "keywords": [],
@@ -21,15 +20,11 @@
   "license": "ISC",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run test"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.{js,ts}": [
-      "jest --coverage --json --outputFile=reports/test-results.json",
-      "git add reports/test-results.json reports/coverage-summary.json"
-    ]
+    "*.{js,ts}": "node pre-commit.js"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
