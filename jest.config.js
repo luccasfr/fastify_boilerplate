@@ -7,4 +7,5 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^prisma/(.*)$': '<rootDir>/prisma/$1',
   },
+  coverageReporters: ['text', 'json-summary'],
 }

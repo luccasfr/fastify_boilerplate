@@ -13,7 +13,7 @@
     "generate": "prisma generate",
     "migrate": "prisma migrate dev",
     "migrate:deploy": "prisma migrate deploy",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "Lucas Ferreira",
