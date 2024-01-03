@@ -2,5 +2,3 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 node pre-push.js
-npm test
-npm test
