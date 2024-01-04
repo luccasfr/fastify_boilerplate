@@ -1,6 +1,6 @@
 # Fastify Boilerplate
 
-### JEST Dynamic Reports
+### Tests Dynamic Reports
 
 The data below is auto-generated based on pre-commit tests.
 
