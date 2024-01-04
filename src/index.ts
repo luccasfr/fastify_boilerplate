@@ -42,7 +42,7 @@ async function run() {
   if (addressInfo.address === '::1')
     fastify.log.info(`Documentation running at http://127.0.0.1:${addressInfo.port}/docs`)
 
-  return fastify.server
+  return fastify
 }
 
 async function silentRun() {

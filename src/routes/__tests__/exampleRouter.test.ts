@@ -4,15 +4,15 @@ import { Server } from 'http'
 import request from 'supertest'
 
 describe('Example Router Tests', () => {
-  let app: Server
+  let server: Server
   let exampleId: number
 
   beforeAll(async () => {
-    app = await silentRun()
+    server = (await silentRun()).server
   })
 
   afterAll((done) => {
-    app.close(() => {
+    server.close(() => {
       done()
     })
   })
@@ -23,7 +23,7 @@ describe('Example Router Tests', () => {
       age: 25,
     }
 
-    const response = await request(app).post('/api/example').send(exampleData)
+    const response = await request(server).post('/api/example').send(exampleData)
 
     if (response.status !== 200) {
       console.error('Error response body:', response.body)
@@ -37,7 +37,7 @@ describe('Example Router Tests', () => {
   })
 
   it('should get all examples with GET /api/example/', async () => {
-    const response = await request(app).get('/api/example')
+    const response = await request(server).get('/api/example')
 
     if (response.status !== 200) {
       console.error('Error response body:', response.body)
@@ -49,7 +49,7 @@ describe('Example Router Tests', () => {
   })
 
   it('should get a specific example by id with GET /api/example/:id', async () => {
-    const response = await request(app).get(`/api/example/${exampleId}`)
+    const response = await request(server).get(`/api/example/${exampleId}`)
 
     if (response.status !== 200) {
       console.error('Error response body:', response.body)
@@ -66,7 +66,7 @@ describe('Example Router Tests', () => {
       age: 30,
     }
 
-    const response = await request(app)
+    const response = await request(server)
       .put(`/api/example/${exampleId}`)
       .send(updatedExampleData)
 
@@ -80,7 +80,7 @@ describe('Example Router Tests', () => {
   })
 
   it('should delete an example with DELETE /api/example/:id', async () => {
-    const response = await request(app).delete(`/api/example/${exampleId}`)
+    const response = await request(server).delete(`/api/example/${exampleId}`)
 
     if (response.status !== 200) {
       console.error('Error response body:', response.body)

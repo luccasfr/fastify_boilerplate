@@ -3,8 +3,8 @@ import { FastifyError, FastifyReply, FastifyRequest } from 'fastify'
 import { ZodError } from 'zod'
 
 const errorHandler = (
-  error: FastifyError,
-  _request: FastifyRequest,
+  error: FastifyError | ZodError | ApiError | Error,
+  _request: FastifyRequest | null,
   reply: FastifyReply,
 ) => {
   if (error instanceof ZodError) {
@@ -17,8 +17,8 @@ const errorHandler = (
       error: error.statusMessage,
       message: error.message,
     })
-  } else {
-    reply.status(error.statusCode || 500)
+  } else if (error) {
+    reply.status(500)
     reply.send(error)
   }
 }
