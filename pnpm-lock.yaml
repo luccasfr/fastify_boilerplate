@@ -9,8 +9,8 @@ dependencies:
     specifier: ^8.5.0
     version: 8.5.0
   '@fastify/jwt':
-    specifier: ^7.2.4
-    version: 7.2.4
+    specifier: ^8.0.0
+    version: 8.0.0
   '@fastify/swagger':
     specifier: ^8.13.0
     version: 8.13.0
@@ -520,8 +520,8 @@ packages:
       fast-json-stringify: 5.9.2
     dev: false
 
-  /@fastify/jwt@7.2.4:
-    resolution: {integrity: sha512-aWJzVb3iZb9xIPjfut8YOrkNEKrZA9xyF2C2Hv9nTheFp7CQPGIZMNTyf3848BsD27nw0JLk8jVLZ2g2DfJOoQ==}
+  /@fastify/jwt@8.0.0:
+    resolution: {integrity: sha512-pJHjmZaokteZFMbsVVt7pbyJpbDogTnpl/aD7eR3vLOPgfktp4k4gUM6cd7RtjL/Ol1qDwL5mup+vdNlZI3K0Q==}
     dependencies:
       '@fastify/error': 3.4.1
       '@lukeed/ms': 2.0.2
