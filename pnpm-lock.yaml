@@ -18,8 +18,8 @@ dependencies:
     specifier: ^2.0.1
     version: 2.0.1
   '@prisma/client':
-    specifier: 5.7.1
-    version: 5.7.1(prisma@5.7.1)
+    specifier: 5.9.0
+    version: 5.9.0(prisma@5.7.1)
   dotenv:
     specifier: ^16.3.1
     version: 16.3.1
@@ -891,8 +891,8 @@ packages:
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     dev: true
 
-  /@prisma/client@5.7.1(prisma@5.7.1):
-    resolution: {integrity: sha512-TUSa4nUcC4nf/e7X3jyO1pEd6XcI/TLRCA0KjkA46RDIpxUaRsBYEOqITwXRW2c0bMFyKcCRXrH4f7h4q9oOlg==}
+  /@prisma/client@5.9.0(prisma@5.7.1):
+    resolution: {integrity: sha512-dHvFZgCT0BpRS+gRhk3S+50DstXMmVowxbrPeUJaK7sjNq5OhzfpT/OGE1kq9z5Q8WmOwIXJXyxP8O2CmP+nSg==}
     engines: {node: '>=16.13'}
     requiresBuild: true
     peerDependencies:
