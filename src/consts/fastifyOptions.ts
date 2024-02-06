@@ -1,5 +1,6 @@
 import { FastifyBaseLogger, FastifyHttpOptions } from 'fastify'
 import { IncomingMessage, Server, ServerResponse } from 'http'
+import fastifyLogger from './fastifyLogger'
 
 const fastifyOptions:
   | FastifyHttpOptions<
@@ -7,9 +8,7 @@ const fastifyOptions:
       FastifyBaseLogger
     >
   | undefined = {
-  logger: {
-    level: 'info',
-  },
+  logger: fastifyLogger,
 }
 
 export default fastifyOptions
