@@ -55,7 +55,7 @@
     "@fastify/jwt": "^7.2.4",
     "@fastify/swagger": "^8.13.0",
     "@fastify/swagger-ui": "^2.0.1",
-    "@prisma/client": "5.7.1",
+    "@prisma/client": "5.9.1",
     "dotenv": "^16.3.1",
     "fastify": "^4.25.2",
     "fastify-type-provider-zod": "^1.1.9",
