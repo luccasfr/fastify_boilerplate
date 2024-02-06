@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "@fastify/cors": "^8.5.0",
-    "@fastify/jwt": "^7.2.4",
+    "@fastify/jwt": "^8.0.0",
     "@fastify/swagger": "^8.13.0",
     "@fastify/swagger-ui": "^2.0.1",
     "@prisma/client": "5.9.1",
