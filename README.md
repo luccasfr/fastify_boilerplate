@@ -34,7 +34,7 @@ pnpm install
 ```bash
 pnpm migrate
 ```
-
+3. The boilerplate has built-in JWT support, in case you want to use it, just do as described above:
 ```ts
 // Uncomment the lines below in index.ts to enable authentication verification.
 import authHandler from './handlers/authHandler'
@@ -42,7 +42,7 @@ import authHandler from './handlers/authHandler'
 fastify.addHook('onRequest', authHandler)
 ```
 
-3. Run the development environment.
+4. Run the development environment.
 
 ```bash
 pnpm dev
