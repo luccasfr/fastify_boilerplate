@@ -14,14 +14,6 @@ The data below is auto-generated based on pre-commit tests.
 - Fastify CORS - Cross-origin Resource Sharing Plugin
 - Fastify JWT - JsonWebToken Plugin
 - Pino & Pino Pretty - Logs
-
-```ts
-// Uncomment the lines below in index.ts to enable authentication verification.
-import authHandler from './handlers/authHandler'
-
-fastify.addHook('onRequest', authHandler)
-```
-
 - Prisma - ORM
 - Zod - IO Validation
 - Zod Type Provider - Type Provider
@@ -41,6 +33,13 @@ pnpm install
 
 ```bash
 pnpm migrate
+```
+
+```ts
+// Uncomment the lines below in index.ts to enable authentication verification.
+import authHandler from './handlers/authHandler'
+
+fastify.addHook('onRequest', authHandler)
 ```
 
 3. Run the development environment.
