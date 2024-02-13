@@ -34,7 +34,7 @@ pnpm install
 ```bash
 pnpm migrate
 ```
-3. The boilerplate has built-in JWT support, in case you want to use it, just do as described above:
+3. The boilerplate has built-in JWT support, in case you want to use it, just do as described below:
 ```ts
 // Uncomment the lines below in index.ts to enable authentication verification.
 import authHandler from './handlers/authHandler'
