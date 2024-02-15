@@ -24,11 +24,11 @@ dependencies:
     specifier: ^16.4.4
     version: 16.4.4
   fastify:
-    specifier: ^4.26.0
-    version: 4.26.0
+    specifier: ^4.26.1
+    version: 4.26.1
   fastify-type-provider-zod:
     specifier: ^1.1.9
-    version: 1.1.9(fastify@4.26.0)(zod@3.22.4)
+    version: 1.1.9(fastify@4.26.1)(zod@3.22.4)
   module-alias:
     specifier: ^2.2.3
     version: 2.2.3
@@ -2246,19 +2246,19 @@ packages:
     resolution: {integrity: sha512-stRHYGeuqpEZTL1Ef0Ovr2ltazUT9g844X5z/zEBFLG8RYlpDiOCIG+ATvYEp+/zmc7sN29mcIMp8gvYplYPIQ==}
     dev: false
 
-  /fastify-type-provider-zod@1.1.9(fastify@4.26.0)(zod@3.22.4):
+  /fastify-type-provider-zod@1.1.9(fastify@4.26.1)(zod@3.22.4):
     resolution: {integrity: sha512-Ztnu1ZWJEKJouZvdTyfgjuVqS+A4JLoCbWBvFqFhfnrg6YQvEvW+5cJvP98kNbuV5gjfpWmHSOTi3BpkidJPQg==}
     peerDependencies:
       fastify: ^4.0.0
       zod: ^3.14.2
     dependencies:
-      fastify: 4.26.0
+      fastify: 4.26.1
       zod: 3.22.4
       zod-to-json-schema: 3.22.4(zod@3.22.4)
     dev: false
 
-  /fastify@4.26.0:
-    resolution: {integrity: sha512-Fq/7ziWKc6pYLYLIlCRaqJqEVTIZ5tZYfcW/mDK2AQ9v/sqjGFpj0On0/7hU50kbPVjLO4de+larPA1WwPZSfw==}
+  /fastify@4.26.1:
+    resolution: {integrity: sha512-tznA/G55dsxzM5XChBfcvVSloG2ejeeotfPPJSFaWmHyCDVGMpvf3nRNbsCb/JTBF9RmQFBfuujWt3Nphjesng==}
     dependencies:
       '@fastify/ajv-compiler': 3.5.0
       '@fastify/error': 3.4.1
