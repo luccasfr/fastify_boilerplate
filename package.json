@@ -57,7 +57,7 @@
     "@fastify/swagger-ui": "^3.0.0",
     "@prisma/client": "5.10.2",
     "dotenv": "^16.4.5",
-    "fastify": "^4.26.1",
+    "fastify": "^4.26.2",
     "fastify-type-provider-zod": "^1.1.9",
     "module-alias": "^2.2.3",
     "pino": "^8.19.0",
