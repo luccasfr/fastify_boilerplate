@@ -38,7 +38,9 @@ async function run() {
   })
   const addressInfo = fastify.server.address() as AddressInfo
 
-  fastify.log.info(`Documentation running at http://${addressInfo.address}/docs`)
+  fastify.log.info(
+    `Documentation running at http://${addressInfo.address}:${addressInfo.port}/docs`,
+  )
   if (addressInfo.address === '::1')
     fastify.log.info(`Documentation running at http://127.0.0.1:${addressInfo.port}/docs`)
 
