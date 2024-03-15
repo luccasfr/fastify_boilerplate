@@ -6,10 +6,9 @@ import {
 import exampleService from '@/services/exampleService'
 import { FastifyInstance } from 'fastify'
 import { ZodTypeProvider } from 'fastify-type-provider-zod'
-import prismaInstance from 'prisma/prismaInstance'
 
 export default async function ExampleRouter(fastify: FastifyInstance) {
-  const exampleServiceInstance = new exampleService(prismaInstance)
+  const exampleServiceInstance = new exampleService()
 
   fastify.withTypeProvider<ZodTypeProvider>().post(
     '/',

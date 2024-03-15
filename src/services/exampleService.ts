@@ -1,14 +1,9 @@
 import ApiError from '@/errors/apiError'
-import { Prisma, PrismaClient } from '@prisma/client'
+import { Prisma } from '@prisma/client'
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library'
+import PrismaService from './prismaService'
 
-export default class ExampleService {
-  private prisma: PrismaClient
-
-  constructor(prisma: PrismaClient) {
-    this.prisma = prisma
-  }
-
+export default class ExampleService extends PrismaService {
   public async create(data: Prisma.exampleCreateInput) {
     return await this.prisma.example.create({ data })
   }
