@@ -1,10 +1,15 @@
+type ErrorCode = 'record/max-reached' | 'record/not-found'
+
 class ApiError extends Error {
   statusCode: number
   statusMessage: string
+  errorCode?: string
 
-  constructor(message: string, statusCode: number) {
+  constructor(message: string, statusCode: number, errorCode?: ErrorCode) {
     super(message)
     this.statusCode = statusCode
+    this.errorCode = errorCode
+
     switch (statusCode) {
       case 400:
         this.statusMessage = 'Bad Request'

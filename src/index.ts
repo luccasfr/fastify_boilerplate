@@ -34,6 +34,7 @@ fastify.register(Routes, { prefix: '/api' })
 async function run() {
   await fastify.ready()
   await fastify.listen({
+    host: process.env.HOST ?? '0.0.0.0',
     port: Number(process.env.PORT) || 5000,
   })
   const addressInfo = fastify.server.address() as AddressInfo
@@ -41,8 +42,6 @@ async function run() {
   fastify.log.info(
     `Documentation running at http://${addressInfo.address}:${addressInfo.port}/docs`,
   )
-  if (addressInfo.address === '::1')
-    fastify.log.info(`Documentation running at http://127.0.0.1:${addressInfo.port}/docs`)
 
   return fastify
 }

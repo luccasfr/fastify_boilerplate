@@ -1,4 +1,5 @@
 import ApiError from '@/errors/apiError'
+import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library'
 import { FastifyError, FastifyReply, FastifyRequest } from 'fastify'
 import { ZodError } from 'zod'
 
@@ -14,9 +15,35 @@ const errorHandler = (
     reply.status(error.statusCode)
     reply.send({
       statusCode: error.statusCode,
-      error: error.statusMessage,
+      error: error.errorCode ?? error.statusMessage,
       message: error.message,
     })
+  } else if (error instanceof PrismaClientKnownRequestError) {
+    switch (error.code) {
+      case 'P2002':
+        reply.status(409)
+        reply.send({
+          statusCode: 409,
+          error: 'Conflict',
+          message: error.message,
+        })
+        break
+      case 'P2025':
+        reply.status(400)
+        reply.send({
+          statusCode: 400,
+          error: 'Bad Request',
+          message: error.message,
+        })
+        break
+      default:
+        reply.status(400)
+        reply.send({
+          statusCode: 400,
+          error: 'Bad Request',
+          message: error.message,
+        })
+    }
   } else if (error) {
     reply.status(500)
     reply.send(error)
