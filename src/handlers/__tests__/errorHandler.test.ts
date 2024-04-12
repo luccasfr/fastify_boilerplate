@@ -39,13 +39,13 @@ describe('errorHandler', () => {
   })
 
   it('should handle ApiError with custom error code', () => {
-    const error = new ApiError('Custom error', 400, 'record/max-reached')
+    const error = new ApiError('Custom error', 400, 'record/not-found')
     errorHandler(error, null, reply)
 
     expect(reply.status).toHaveBeenCalledWith(400)
     expect(reply.send).toHaveBeenCalledWith({
       statusCode: 400,
-      error: 'record/max-reached',
+      error: 'record/not-found',
       message: 'Custom error',
     })
   })

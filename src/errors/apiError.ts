@@ -1,9 +1,9 @@
-type ErrorCode = 'record/max-reached' | 'record/not-found'
+type ErrorCode = 'record/not-found'
 
 class ApiError extends Error {
   statusCode: number
   statusMessage: string
-  errorCode?: string
+  errorCode?: ErrorCode
 
   constructor(message: string, statusCode: number, errorCode?: ErrorCode) {
     super(message)
