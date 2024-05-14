@@ -47,3 +47,17 @@ fastify.addHook('onRequest', authHandler)
 ```bash
 pnpm dev
 ```
+
+## Authors
+
+<table>
+  <tbody>
+    <td align="center">
+      <a href="https://github.com/luccasfr">
+        <img src="https://github.com/luccasfr.png?size=100" />
+        <p>Lucas Ferreira</p>
+      </a>
+    </td>
+  </tbody>
+</table>
+
