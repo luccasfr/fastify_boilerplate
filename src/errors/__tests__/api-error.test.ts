@@ -1,6 +1,11 @@
 import ApiError from '@/errors/api-error'
 
 describe('ApiError', () => {
+  it('should set statusMessage to "Bad Request" for status code 400', () => {
+    const error = new ApiError('Bad request error', 400)
+    expect(error.statusMessage).toBe('Bad Request')
+  })
+
   it('should set statusMessage to "Unauthorized" for status code 401', () => {
     const error = new ApiError('Unauthorized error', 401)
     expect(error.statusMessage).toBe('Unauthorized')
