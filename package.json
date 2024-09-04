@@ -17,7 +17,8 @@
     "migrate:deploy": "prisma migrate deploy",
     "test": "jest --coverage",
     "test:report": "jest --coverage --json --outputFile=reports/test-results.json",
-    "precommit": "node pre-commit.js"
+    "precommit": "node pre-commit.js",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "Lucas Ferreira",
