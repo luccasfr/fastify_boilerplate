@@ -1,6 +1,6 @@
 # Fastify Boilerplate
 
-### Tests Dynamic Reports
+### Dynamic Test Reports
 
 The data below is auto-generated based on pre-commit tests.
 
