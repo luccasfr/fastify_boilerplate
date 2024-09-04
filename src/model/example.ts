@@ -12,7 +12,7 @@ export const exampleParamsSchema = z
     id: z
       .string()
       .refine((v) => {
-        return !isNaN(Number(v))
+        return !Number.isNaN(Number(v))
       })
       .describe('Some description for id'),
   })

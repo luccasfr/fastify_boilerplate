@@ -1,6 +1,6 @@
 import { silentRun } from '@/index'
-import { exampleResponseSchema } from '@/schemas/exampleSchemas'
-import { Server } from 'http'
+import { exampleResponseSchema } from '@/model/example'
+import { Server } from 'node:http'
 import request from 'supertest'
 
 describe('Example Router Tests', () => {
@@ -8,7 +8,8 @@ describe('Example Router Tests', () => {
   let exampleId: number
 
   beforeAll(async () => {
-    server = (await silentRun()).server
+    const running = await silentRun()
+    server = running.server
   })
 
   afterAll((done) => {

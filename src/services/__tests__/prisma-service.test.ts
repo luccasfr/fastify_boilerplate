@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client'
-import PrismaService from '../prismaService'
+import PrismaService from '../prisma-service'
 
 describe('PrismaService', () => {
   let prismaService: PrismaService

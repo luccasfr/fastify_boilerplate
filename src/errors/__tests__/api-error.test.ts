@@ -1,4 +1,4 @@
-import ApiError from '@/errors/apiError'
+import ApiError from '@/errors/api-error'
 
 describe('ApiError', () => {
   it('should set statusMessage to "Unauthorized" for status code 401', () => {

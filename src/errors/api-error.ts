@@ -1,34 +1,36 @@
-type ErrorCode = 'record/not-found'
-
 class ApiError extends Error {
   statusCode: number
   statusMessage: string
-  errorCode?: ErrorCode
 
-  constructor(message: string, statusCode: number, errorCode?: ErrorCode) {
+  constructor(message: string, statusCode: number) {
     super(message)
     this.statusCode = statusCode
-    this.errorCode = errorCode
 
     switch (statusCode) {
-      case 400:
+      case 400: {
         this.statusMessage = 'Bad Request'
         break
-      case 401:
+      }
+      case 401: {
         this.statusMessage = 'Unauthorized'
         break
-      case 403:
+      }
+      case 403: {
         this.statusMessage = 'Forbidden'
         break
-      case 404:
+      }
+      case 404: {
         this.statusMessage = 'Not Found'
         break
-      case 500:
+      }
+      case 500: {
         this.statusMessage = 'Internal Server Error'
         break
-      default:
+      }
+      default: {
         this.statusMessage = 'Internal Server Error'
         break
+      }
     }
   }
 }

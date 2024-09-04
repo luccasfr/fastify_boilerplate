@@ -2,8 +2,8 @@ import {
   exampleParamsSchema,
   exampleResponseSchema,
   exampleSchema,
-} from '@/schemas/exampleSchemas'
-import exampleService from '@/services/exampleService'
+} from '@/model/example'
+import exampleService from '@/services/example-service'
 import { FastifyInstance } from 'fastify'
 import { ZodTypeProvider } from 'fastify-type-provider-zod'
 

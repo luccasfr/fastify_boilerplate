@@ -1,5 +1,5 @@
-import ApiError from '@/errors/apiError'
-import errorHandler from '@/handlers/errorHandler'
+import ApiError from '@/errors/api-error'
+import errorHandler from '@/handlers/error-handler'
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library'
 import { FastifyReply } from 'fastify'
 import { ZodError } from 'zod'
@@ -35,18 +35,6 @@ describe('errorHandler', () => {
       statusCode: 404,
       error: 'Not Found',
       message: 'Not Found',
-    })
-  })
-
-  it('should handle ApiError with custom error code', () => {
-    const error = new ApiError('Custom error', 400, 'record/not-found')
-    errorHandler(error, null, reply)
-
-    expect(reply.status).toHaveBeenCalledWith(400)
-    expect(reply.send).toHaveBeenCalledWith({
-      statusCode: 400,
-      error: 'record/not-found',
-      message: 'Custom error',
     })
   })
 

@@ -4,7 +4,7 @@ export default async function authHandler(request: FastifyRequest, reply: Fastif
   try {
     if (request.url.startsWith('/docs')) return
     await request.jwtVerify()
-  } catch (err) {
-    reply.send(err)
+  } catch (error) {
+    reply.send(error)
   }
 }

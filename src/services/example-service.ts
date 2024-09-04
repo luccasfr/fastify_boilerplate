@@ -1,5 +1,5 @@
 import { Prisma } from '@prisma/client'
-import PrismaService from './prismaService'
+import PrismaService from './prisma-service'
 
 export default class ExampleService extends PrismaService {
   public async create(data: Prisma.exampleCreateInput) {

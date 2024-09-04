@@ -1,6 +1,6 @@
 import { FastifyBaseLogger, FastifyHttpOptions } from 'fastify'
-import { IncomingMessage, Server, ServerResponse } from 'http'
-import fastifyLogger from './fastifyLogger'
+import { IncomingMessage, Server, ServerResponse } from 'node:http'
+import fastifyLogger from './fastify-logger'
 
 const fastifyOptions:
   | FastifyHttpOptions<

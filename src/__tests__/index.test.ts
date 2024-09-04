@@ -1,5 +1,5 @@
 import { run } from '@/index'
-import { AddressInfo } from 'net'
+import { AddressInfo } from 'node:net'
 
 jest.mock('fastify', () => {
   return jest.fn().mockReturnValue({
