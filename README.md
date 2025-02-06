@@ -26,15 +26,17 @@ The data below is auto-generated based on pre-commit tests.
 1. Install all dependencies.
 
 ```bash
-pnpm install
+yarn install
 ```
 
 2. Create the database and apply migrations.
 
 ```bash
-pnpm migrate
+yarn migrate
 ```
+
 3. The boilerplate has built-in JWT support, in case you want to use it, just do as described below:
+
 ```ts
 // Uncomment the lines below in index.ts to enable authentication verification.
 import authHandler from './handlers/authHandler'
@@ -45,7 +47,7 @@ fastify.addHook('onRequest', authHandler)
 4. Run the development environment.
 
 ```bash
-pnpm dev
+yarn dev
 ```
 
 ## Authors
@@ -60,4 +62,3 @@ pnpm dev
     </td>
   </tbody>
 </table>
-
