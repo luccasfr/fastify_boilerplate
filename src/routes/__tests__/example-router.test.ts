@@ -18,13 +18,13 @@ describe('Example Router Tests', () => {
     })
   })
 
-  it('should create a new example with POST /api/example/', async () => {
+  it('should create a new example with POST /example/', async () => {
     const exampleData = {
       name: 'John Doe',
       age: 25,
     }
 
-    const response = await request(server).post('/api/example').send(exampleData)
+    const response = await request(server).post('/example').send(exampleData)
 
     if (response.status !== 200) {
       console.error('Error response body:', response.body)
@@ -37,8 +37,8 @@ describe('Example Router Tests', () => {
     exampleId = response.body.id
   })
 
-  it('should get all examples with GET /api/example/', async () => {
-    const response = await request(server).get('/api/example')
+  it('should get all examples with GET /example/', async () => {
+    const response = await request(server).get('/example')
 
     if (response.status !== 200) {
       console.error('Error response body:', response.body)
@@ -49,8 +49,8 @@ describe('Example Router Tests', () => {
     expect(validationResult.success).toBe(true)
   })
 
-  it('should get a specific example by id with GET /api/example/:id', async () => {
-    const response = await request(server).get(`/api/example/${exampleId}`)
+  it('should get a specific example by id with GET /example/:id', async () => {
+    const response = await request(server).get(`/example/${exampleId}`)
 
     if (response.status !== 200) {
       console.error('Error response body:', response.body)
@@ -61,14 +61,14 @@ describe('Example Router Tests', () => {
     expect(validationResult.success).toBe(true)
   })
 
-  it('should update an example with PUT /api/example/:id', async () => {
+  it('should update an example with PUT /example/:id', async () => {
     const updatedExampleData = {
       name: 'Updated Name',
       age: 30,
     }
 
     const response = await request(server)
-      .put(`/api/example/${exampleId}`)
+      .put(`/example/${exampleId}`)
       .send(updatedExampleData)
 
     if (response.status !== 200) {
@@ -80,8 +80,8 @@ describe('Example Router Tests', () => {
     expect(validationResult.success).toBe(true)
   })
 
-  it('should delete an example with DELETE /api/example/:id', async () => {
-    const response = await request(server).delete(`/api/example/${exampleId}`)
+  it('should delete an example with DELETE /example/:id', async () => {
+    const response = await request(server).delete(`/example/${exampleId}`)
 
     if (response.status !== 200) {
       console.error('Error response body:', response.body)

@@ -8,9 +8,9 @@ import { serializerCompiler, validatorCompiler } from 'fastify-type-provider-zod
 import { AddressInfo } from 'node:net'
 import fastifyCORSOptions from './consts/fastify-cors-options'
 import fastifyJWTOptions from './consts/fastify-jwt-options'
-import fastifyOptions from './consts/options'
 import fastifySwaggerOptions from './consts/fastify-swagger-options'
 import fastifySwaggerUIOptions from './consts/fastify-swagger-ui-options'
+import fastifyOptions from './consts/options'
 import errorHandler from './handlers/error-handler'
 import Routes from './routes'
 // Uncomment to enable JWT authentication
@@ -29,9 +29,11 @@ fastify.register(fastifyJWT, fastifyJWTOptions)
 fastify.register(fastifySwagger, fastifySwaggerOptions)
 fastify.register(fastifySwaggerUI, fastifySwaggerUIOptions)
 
-fastify.register(Routes, { prefix: '/api' })
+fastify.register(Routes)
 
 async function run() {
+  // const exampleService = new ExampleService()
+  // await exampleService.create({ id: 1, name: 'example', age: 20 })
   await fastify.ready()
   await fastify.listen({
     host: process.env.HOST ?? '0.0.0.0',
@@ -48,6 +50,7 @@ async function run() {
 
 async function silentRun() {
   fastify.log.level = 'silent'
+
   return await run()
 }
 

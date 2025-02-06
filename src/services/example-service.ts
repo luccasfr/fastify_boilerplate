@@ -2,7 +2,7 @@ import { Prisma } from '@prisma/client'
 import PrismaService from './prisma-service'
 
 export default class ExampleService extends PrismaService {
-  public async create(data: Prisma.exampleCreateInput) {
+  public async create(data: Prisma.exampleCreateInput & { id?: number }) {
     return await this.prisma.example.create({ data })
   }
 
