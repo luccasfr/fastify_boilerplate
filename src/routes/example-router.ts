@@ -6,6 +6,7 @@ import {
 import exampleService from '@/services/example-service'
 import { FastifyInstance } from 'fastify'
 import { ZodTypeProvider } from 'fastify-type-provider-zod'
+import { z } from 'zod'
 
 export default async function ExampleRouter(fastify: FastifyInstance) {
   const exampleServiceInstance = new exampleService()
@@ -53,10 +54,13 @@ export default async function ExampleRouter(fastify: FastifyInstance) {
         description: 'Get example by id',
         tags: ['Example'],
         params: exampleParamsSchema,
+        response: {
+          200: exampleResponseSchema.or(z.null()),
+        },
       },
     },
     async (request) => {
-      return exampleServiceInstance.findUnique({
+      return await exampleServiceInstance.findUnique({
         id: Number(request.params.id),
       })
     },
@@ -71,6 +75,9 @@ export default async function ExampleRouter(fastify: FastifyInstance) {
         tags: ['Example'],
         body: exampleSchema,
         params: exampleParamsSchema,
+        response: {
+          200: exampleResponseSchema,
+        },
       },
     },
     async (request) => {
@@ -88,6 +95,9 @@ export default async function ExampleRouter(fastify: FastifyInstance) {
         description: 'Delete example',
         tags: ['Example'],
         params: exampleParamsSchema,
+        response: {
+          200: exampleResponseSchema,
+        },
       },
     },
     async (request) => {
