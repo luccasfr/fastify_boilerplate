@@ -33,7 +33,6 @@
   "devDependencies": {
     "@luccasfr/eslint-config-nodejs": "^1.0.15",
     "@types/jest": "^29.5.14",
-    "@types/node": "^20.17.17",
     "@types/supertest": "^6.0.2",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
@@ -46,9 +45,9 @@
     "jest-mock-extended": "^3.0.7",
     "lint-staged": "^15.4.3",
     "nodemon": "^3.1.9",
-    "prettier": "^3.4.2",
+    "prettier": "3.5.2",
     "supertest": "^6.3.4",
-    "ts-jest": "^29.2.5",
+    "ts-jest": "29.2.6",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.7.3"
@@ -59,6 +58,7 @@
     "@fastify/swagger": "^8.15.0",
     "@fastify/swagger-ui": "^3.1.0",
     "@prisma/client": "5.19.1",
+    "@types/node": "20.17.19",
     "dotenv": "^16.4.7",
     "fastify": "^4.29.0",
     "fastify-type-provider-zod": "^1.2.0",
@@ -66,6 +66,6 @@
     "pino": "^8.21.0",
     "pino-pretty": "^10.3.1",
     "prisma": "^5.22.0",
-    "zod": "^3.24.1"
+    "zod": "3.24.2"
   }
 }
