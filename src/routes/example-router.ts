@@ -24,9 +24,7 @@ export default async function ExampleRouter(fastify: FastifyInstance) {
         },
       },
     },
-    async (request) => {
-      return exampleServiceInstance.create(request.body)
-    },
+    async (request) => await exampleServiceInstance.create(request.body),
   )
 
   fastify.withTypeProvider<ZodTypeProvider>().get(
@@ -41,9 +39,7 @@ export default async function ExampleRouter(fastify: FastifyInstance) {
         },
       },
     },
-    async () => {
-      return exampleServiceInstance.findMany()
-    },
+    async () => await exampleServiceInstance.findMany(),
   )
 
   fastify.withTypeProvider<ZodTypeProvider>().get(
@@ -59,11 +55,10 @@ export default async function ExampleRouter(fastify: FastifyInstance) {
         },
       },
     },
-    async (request) => {
-      return await exampleServiceInstance.findUnique({
+    async (request) =>
+      await exampleServiceInstance.findUnique({
         id: Number(request.params.id),
-      })
-    },
+      }),
   )
 
   fastify.withTypeProvider<ZodTypeProvider>().put(
@@ -80,11 +75,10 @@ export default async function ExampleRouter(fastify: FastifyInstance) {
         },
       },
     },
-    async (request) => {
-      return exampleServiceInstance.update(request.body, {
+    async (request) =>
+      await exampleServiceInstance.update(request.body, {
         id: Number(request.params.id),
-      })
-    },
+      }),
   )
 
   fastify.withTypeProvider<ZodTypeProvider>().delete(
@@ -100,10 +94,9 @@ export default async function ExampleRouter(fastify: FastifyInstance) {
         },
       },
     },
-    async (request) => {
-      return exampleServiceInstance.delete({
+    async (request) =>
+      await exampleServiceInstance.delete({
         id: Number(request.params.id),
-      })
-    },
+      }),
   )
 }
