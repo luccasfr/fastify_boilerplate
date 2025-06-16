@@ -33,7 +33,6 @@ declare namespace NodeJS {
      * Defaults to 5000 if not specified
      */
     PORT?: string
-
     /**
      * Hostname of the application server
      * Defaults to '0.0.0.0' if not specified.
