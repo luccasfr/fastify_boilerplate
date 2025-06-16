@@ -4,9 +4,9 @@
   "description": "Boilerplate for Fastify API's with Zod (with zod type provider) and Prisma ORM",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development tsx watch --require tsconfig-paths/register src/index.ts",
+    "dev": "tsx watch --require tsconfig-paths/register src/index.ts",
     "build": "tsc && tsc-alias",
-    "start": "NODE_ENV=production node --require tsconfig-paths/register dist/index.js",
+    "start": "node --require tsconfig-paths/register dist/index.js",
     "lint": "eslint --ext .ts src",
     "type-check": "tsc --noEmit",
     "prettier": "prettier --write \"src/**/*.{ts,tsx}\"",

@@ -18,11 +18,26 @@ declare namespace NodeJS {
      * - 'test': For running tests
      */
     NODE_ENV: 'development' | 'production' | 'test'
-
     /**
      * Secret key used for signing and verifying JWT tokens
      * This should be a secure random string in production
      */
     JWT_SECRET: string
+    /**
+     * URL of the database
+     * This should be a valid connection string for the database being used
+     */
+    DATABASE_URL: string
+    /**
+     * Port on which the application server will run
+     * Defaults to 5000 if not specified
+     */
+    PORT?: string
+
+    /**
+     * Hostname of the application server
+     * Defaults to '0.0.0.0' if not specified.
+     */
+    HOST: string
   }
 }
