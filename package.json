@@ -1,5 +1,5 @@
 {
-  "name": "fastify-boilerplate-v5",
+  "name": "fastify-boilerplate",
   "version": "1.0.0",
   "description": "Boilerplate for Fastify API's with Zod (with zod type provider) and Prisma ORM",
   "main": "index.js",
@@ -15,7 +15,7 @@
     "migrate:deploy": "prisma migrate deploy"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lucas Ferreira",
   "license": "ISC",
   "dependencies": {
     "@fastify/cors": "^11.0.1",
