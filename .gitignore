@@ -2,3 +2,4 @@ node_modules
 prisma/dev.db
 prisma/dev.db-journal
 dist/**
+.DS_Store
