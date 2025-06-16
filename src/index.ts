@@ -8,6 +8,7 @@ import {
   fastifySwaggerUiOptions,
 } from '@/consts/fastify-options'
 // import authHandler from "@/handlers/auth-handler";
+import errorHandler from '@/handlers/error-handler'
 import { routes } from '@/routes'
 import fastifyCors from '@fastify/cors'
 import fastifyJwt from '@fastify/jwt'
@@ -18,7 +19,6 @@ import {
   serializerCompiler,
   validatorCompiler,
 } from 'fastify-type-provider-zod'
-import errorHandler from './handlers/error-handler'
 
 const DEFAULT_PORT = '5000'
 const DEFAULT_HOST = '0.0.0.0'

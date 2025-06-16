@@ -32,17 +32,23 @@ This boilerplate includes:
 pnpm install
 ```
 
-2. Create the database and apply migrations:
+2. Configure your environment variables by creating a `.env` file in the root directory. You can use the provided `.env.example` as a reference.
+
+```bash
+cp .env.example .env
+```
+
+3. Create the database and apply migrations:
 
 ```bash
 pnpm migrate
 ```
 
-3. Enable JWT authentication (optional):
+4. Enable JWT authentication (optional):
 
 ```ts
 // Uncomment these lines in index.ts to enable authentication:
-import authHandler from './handlers/authHandler'
+import authHandler from '@/handlers/authHandler'
 
 fastify.addHook('onRequest', authHandler)
 ```
